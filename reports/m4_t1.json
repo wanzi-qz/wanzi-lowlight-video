@@ -1,0 +1,57 @@
+{
+  "summary": [
+    {
+      "method": "low-light input",
+      "psnr": 14.876588620665709,
+      "psnr_aligned": 25.83927348218026,
+      "ssim": 0.6147402536334798,
+      "tof": 18.55379517873128,
+      "tof_ratio": 1.0
+    },
+    {
+      "method": "UNet per-frame",
+      "psnr": 24.827721336000646,
+      "psnr_aligned": 27.583229428802582,
+      "ssim": 0.8330449350416264,
+      "tof": 28.204163827757906,
+      "tof_ratio": 1.4582465883382156
+    },
+    {
+      "method": "UNet + T1 (flow on input)",
+      "psnr": 25.32101420481345,
+      "psnr_aligned": 27.82269766614318,
+      "ssim": 0.8547676535501939,
+      "tof": 24.949586909750234,
+      "tof_ratio": 1.2708196142977735
+    },
+    {
+      "method": "UNet + T1 (flow on GT, oracle)",
+      "psnr": 25.34544206058567,
+      "psnr_aligned": 27.963145843795033,
+      "ssim": 0.8598285524825059,
+      "tof": 25.28222898123921,
+      "tof_ratio": 1.284971975876427
+    },
+    {
+      "method": "UNet + T1 (shuffled flow)",
+      "psnr": 24.827721336000646,
+      "psnr_aligned": 27.583229428802582,
+      "ssim": 0.8330449350416264,
+      "tof": 32.07530357526696,
+      "tof_ratio": 1.5148523425741827
+    }
+  ],
+  "checks": {
+    "tOF 下降 ≥20%": false,
+    "PSNR 下降 ≤0.2dB": true,
+    "置换对照无效或变差（shuffled tOF ≥ 正常 T1）": true
+  },
+  "params": {
+    "past": 2,
+    "future": 6,
+    "weight_decay": 0.55,
+    "phot_sigma": 0.35,
+    "fb_thresh": 1.5,
+    "flow_blur": 1.5
+  }
+}

@@ -1,0 +1,13 @@
+# M1 低光合成默认参数（EV=2.5/Φ=800，亮度对齐 PSNR≈26dB，由难度扫描选定）
+# 完整推导见 src/synthesis.py 模块注释与 reports/m1_synthesis_check.md
+ev: 2.5
+full_well: 800.0
+read_noise: 2.5
+brightness_keep: 0.35
+wb_rgb:
+- 1.0
+- 1.0
+- 1.06
+jpeg_quality: 90
+quantize_bits: 8
+alpha: 5.656854249492381

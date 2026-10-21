@@ -1,0 +1,17 @@
+# 核心（必需）
+numpy>=1.24
+opencv-python>=4.8
+scipy>=1.11
+scikit-image>=0.22
+
+# 深度学习（装 CUDA 版见 README / DECISIONS D5）
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+torch>=2.1
+torchvision>=0.16
+
+# 指标与工具
+lpips>=0.1.4
+pyyaml>=6.0
+tqdm>=4.66
+pandas>=2.0
+matplotlib>=3.7

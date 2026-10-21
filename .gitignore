@@ -1,0 +1,15 @@
+# 环境
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# 数据与训练产物（全部可由脚本重新生成）
+data/
+runs/
+wandb/
+
+# reports：表格与图入库；预览视频和原始大图不入库
+reports/*.mp4
+reports/m1_synthesis_preview.png
+reports/preview_*.png

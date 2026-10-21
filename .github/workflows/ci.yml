@@ -1,0 +1,32 @@
+name: smoke-test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # CPU 版 torch（CI 不需要 GPU），单独装以走 pytorch 的 CPU index
+      - name: Install CPU PyTorch
+        run: pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+
+      - name: Install rest
+        run: |
+          pip install numpy opencv-python-headless scipy scikit-image pyyaml tqdm matplotlib lpips
+
+      - name: Environment check
+        run: python scripts/00_check_env.py
+
+      - name: Smoke tests (CPU, ~2 min)
+        run: python tests/test_smoke.py

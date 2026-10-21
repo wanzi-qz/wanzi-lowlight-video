@@ -1,0 +1,150 @@
+{
+  "scatter": [
+    {
+      "seq": "bike-packing",
+      "method": "low-light input",
+      "psnr": 15.90143471945242,
+      "tof_ratio": 1.0
+    },
+    {
+      "seq": "bike-packing",
+      "method": "gamma(1.5)",
+      "psnr": 21.736388605680286,
+      "tof_ratio": 1.3038803035759565
+    },
+    {
+      "seq": "bike-packing",
+      "method": "v0 (per-frame)",
+      "psnr": 26.33967355989151,
+      "tof_ratio": 1.2265755302464783
+    },
+    {
+      "seq": "bike-packing",
+      "method": "+ T1 fused",
+      "psnr": 27.40124512489274,
+      "tof_ratio": 0.9894845824109666
+    },
+    {
+      "seq": "bike-packing",
+      "method": "T2 lam=0.3",
+      "psnr": 26.051477193687465,
+      "tof_ratio": 1.2123452475494734
+    },
+    {
+      "seq": "bike-packing",
+      "method": "T2 lam=3",
+      "psnr": 26.076353004883135,
+      "tof_ratio": 1.1433665169813991
+    },
+    {
+      "seq": "bmx-trees",
+      "method": "low-light input",
+      "psnr": 14.786649606842468,
+      "tof_ratio": 1.0
+    },
+    {
+      "seq": "bmx-trees",
+      "method": "gamma(1.5)",
+      "psnr": 21.589033995772436,
+      "tof_ratio": 1.1440811329784917
+    },
+    {
+      "seq": "bmx-trees",
+      "method": "v0 (per-frame)",
+      "psnr": 25.268686191285695,
+      "tof_ratio": 1.6810322865684666
+    },
+    {
+      "seq": "bmx-trees",
+      "method": "+ T1 fused",
+      "psnr": 25.754337559804824,
+      "tof_ratio": 1.5734621960742405
+    },
+    {
+      "seq": "bmx-trees",
+      "method": "T2 lam=0.3",
+      "psnr": 24.866438168144914,
+      "tof_ratio": 1.7002610018655784
+    },
+    {
+      "seq": "bmx-trees",
+      "method": "T2 lam=3",
+      "psnr": 25.148077742468477,
+      "tof_ratio": 1.6605022526231548
+    },
+    {
+      "seq": "motocross-jump",
+      "method": "low-light input",
+      "psnr": 13.942629727556366,
+      "tof_ratio": 1.0
+    },
+    {
+      "seq": "motocross-jump",
+      "method": "gamma(1.5)",
+      "psnr": 19.567158964103182,
+      "tof_ratio": 1.1114020583287452
+    },
+    {
+      "seq": "motocross-jump",
+      "method": "v0 (per-frame)",
+      "psnr": 23.776292792437456,
+      "tof_ratio": 1.6026360542605858
+    },
+    {
+      "seq": "motocross-jump",
+      "method": "+ T1 fused",
+      "psnr": 24.292112285818188,
+      "tof_ratio": 1.3231218786221035
+    },
+    {
+      "seq": "motocross-jump",
+      "method": "T2 lam=0.3",
+      "psnr": 23.162820388696996,
+      "tof_ratio": 1.6081991504611495
+    },
+    {
+      "seq": "motocross-jump",
+      "method": "T2 lam=3",
+      "psnr": 23.255752964878884,
+      "tof_ratio": 1.5710362242624747
+    }
+  ],
+  "stats": [
+    {
+      "vs": "gamma(1.5)",
+      "median_diff": -3.872487689911374,
+      "mean_diff": -4.164023659352919,
+      "ci95": [
+        -4.314573491554304,
+        -4.015394591487176
+      ],
+      "win_rate": 0.0,
+      "W": 0.0,
+      "p": 1.6587518023763977e-13
+    },
+    {
+      "vs": "+ T1 fused",
+      "median_diff": 0.6344079744206326,
+      "mean_diff": 0.6876808089670315,
+      "ci95": [
+        0.5900057898215283,
+        0.7802498628141804
+      ],
+      "win_rate": 0.9444444444444444,
+      "W": 54.0,
+      "p": 1.5411654528627438e-12
+    },
+    {
+      "vs": "T2 lam=3",
+      "median_diff": -0.27072726885348786,
+      "mean_diff": -0.30148961046138567,
+      "ci95": [
+        -0.3447009232667952,
+        -0.2614618517980889
+      ],
+      "win_rate": 0.0,
+      "W": 0.0,
+      "p": 1.6587518023763977e-13
+    }
+  ]
+}

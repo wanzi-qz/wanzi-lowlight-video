@@ -1,0 +1,90 @@
+{
+  "generated_at": "2026-10-21 10:21:16",
+  "python": "3.12.3",
+  "executable": "W:\\Anaconda\\python.exe",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "packages": [
+    {
+      "name": "numpy",
+      "status": "OK",
+      "version": "1.26.4",
+      "required": true
+    },
+    {
+      "name": "opencv-python",
+      "status": "OK",
+      "version": "4.10.0",
+      "required": true
+    },
+    {
+      "name": "torch",
+      "status": "OK",
+      "version": "2.5.1",
+      "required": true
+    },
+    {
+      "name": "torchvision",
+      "status": "OK",
+      "version": "0.20.1",
+      "required": false
+    },
+    {
+      "name": "scipy",
+      "status": "OK",
+      "version": "1.13.1",
+      "required": false
+    },
+    {
+      "name": "scikit-image",
+      "status": "OK",
+      "version": "0.25.2",
+      "required": false
+    },
+    {
+      "name": "lpips",
+      "status": "MISSING",
+      "version": "-",
+      "required": false
+    },
+    {
+      "name": "pyyaml",
+      "status": "OK",
+      "version": "6.0.1",
+      "required": false
+    },
+    {
+      "name": "tqdm",
+      "status": "OK",
+      "version": "4.66.5",
+      "required": false
+    }
+  ],
+  "torch": {
+    "installed": true,
+    "version": "2.5.1",
+    "cuda_build": "cpu-only",
+    "cuda_available": false,
+    "device": null,
+    "vram_gb": null,
+    "threads": 8
+  },
+  "nvidia_smi": "NVIDIA GeForce RTX 4060 Laptop GPU, 616.92, 8188 MiB, 1829 MiB",
+  "tools": {
+    "ffmpeg": "not found",
+    "git": "W:\\WorkBuddy\\resources\\vendor\\PortableGit\\mingw64\\bin\\git.EXE"
+  },
+  "disk": {
+    "total_gb": 475.3,
+    "free_gb": 198.4
+  },
+  "data": {
+    "data_dir_exists": true,
+    "subdirs": []
+  },
+  "status": "READY (with TODO)",
+  "todo": [
+    "torch 是 CPU 版（cuda_available=False），但机器有 GPU → 建议装 cu121 版，训练快 10-20 倍",
+    "ffmpeg 未找到（本方案用 DAVIS 的 JPEG 帧序列，可不需要；若要导出 mp4 对比视频再装）",
+    "data/ 为空 → M0 下一步下载 DAVIS-2017 480p（约 800MB）"
+  ]
+}
