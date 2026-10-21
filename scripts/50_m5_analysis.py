@@ -167,17 +167,17 @@ def main() -> int:
         agg[r["method"]]["psnr"].append(r["psnr"])
         agg[r["method"]]["tof"].append(r["tof_ratio"])
 
-    fig, ax = plt.subplots(figsize=(7, 5))
+    fig, ax = plt.subplots(figsize=(5.2, 3.8))
     for name, v in agg.items():
-        ax.scatter(np.mean(v["tof"]), np.mean(v["psnr"]), s=80)
+        ax.scatter(np.mean(v["tof"]), np.mean(v["psnr"]), s=60)
         ax.annotate(name, (np.mean(v["tof"]), np.mean(v["psnr"])),
-                    textcoords="offset points", xytext=(8, 4), fontsize=8)
+                    textcoords="offset points", xytext=(7, 4), fontsize=7.5)
     ax.set_xlabel("tOF / tOF_input  (lower = more stable)")
     ax.set_ylabel("PSNR dB (higher = better)")
     ax.set_title("M5 · fidelity-stability trade-off (test, 3 seq × 24 frames)")
     ax.grid(alpha=0.3)
     fig.tight_layout()
-    fig.savefig(REPORTS / "m5_scatter.png", dpi=130)
+    fig.savefig(REPORTS / "m5_scatter.png", dpi=110)
     print(f"[out] {REPORTS/'m5_scatter.png'}")
 
     # ---------------- Q3 失败案例 ----------------
